@@ -1,0 +1,18 @@
+	<!-- Colocar correctamente en el web.xml segun corresponda -->
+	
+	<!-- Tiempo de expiración de la sesión-->
+	<session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+   <!-- Listener Set atributes Session -->
+    <listener>
+        <description>HttpSessionAttributeListener</description>
+        <listener-class>net.fullcarga.titan6.servlet.SessionAttributeListener</listener-class>
+    </listener>
+	
+    <!-- Listener create/destroy Sessión -->
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>net.fullcarga.titan6.servlet.SessionListener</listener-class>
+    </listener>

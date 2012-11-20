@@ -1,0 +1,12 @@
+        <interceptors>
+            <interceptor name="userSesionInterceptor" class="net.ejemplo.sesiones.interceptor.UserSessionInterceptor"/>
+            <interceptor-stack name="securePppStack">
+                <interceptor-ref name="token"/>
+                <interceptor-ref name="userSesionInterceptor"/>
+            </interceptor-stack>
+        </interceptors>
+		
+        <global-results>
+            <result name="userAnotherSesion" type="dispatcher">/WEB-INF/JSP/error/userAnotherSesion.jsp</result>
+            <result name="invalid.token" type="dispatcher">/WEB-INF/JSP/error/userAnotherSesion.jsp</result>
+        </global-results>
